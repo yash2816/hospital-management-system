@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PATEL YASHKUMAR DARSHANBHAI — Portfolio</title>
+  <meta name="description" content="Professional portfolio — web developer | designer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.03);
+      --max-w:1100px; --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#071026 0%, #071826 60%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .container{max-width:var(--max-w); margin:36px auto; padding:24px}
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:56px;height:56px;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#0284c7);padding:10px 14px;border-radius:10px;color:#05212a;text-font-weight:700}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:22px; box-shadow: 0 6px 30px rgba(2,6,23,0.6);}
+    h1{margin:0;font-size:28px}
+    h2{margin:8px 0 0;font-size:18px;color:var(--muted)}
+    .hero-intro{line-height:1.6;color:#d9e9f4}
+    .actions{margin-top:18px;display:flex;gap:12px}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .project{padding:16px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
+    .project h3{margin:0 0 8px;font-size:16px}
+    .skills{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:10px;font-weight:600;color:var(--muted)}
+    /* Right column */
+    .profile-card{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+    .profile-card .big-avatar{width:160px;height:160px;border-radius:16px;overflow:hidden;border:4px solid rgba(255,255,255,0.04)}
+    .contact-list{width:100%;display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    .contact-item{display:flex;align-items:center;gap:10px;justify-content:center;padding:10px;border-radius:10px;background:rgba(255,255,255,0.02)}
+    /* About / Experience */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+    .experience-item{padding:12px;border-radius:12px;background:rgba(255,255,255,0.02)}
+    /* Contact */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:100px}
+    /* Footer */
+    footer{margin-top:28px;text-align:center;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr 320px}
+      .projects-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:760px){
+      .container{padding:16px}
+      .hero{grid-template-columns:1fr;}
+      nav{display:none}
+      .projects-grid{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .brand .name{display:none}
+    }
+
+    /* small interactive */
+    a.btn{display:inline-block;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.03);text-decoration:none;color:inherit;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar"><img src="IMAGE/WhatsApp Image 2023-03-24 at 21.45.47.jpg" alt="avatar"></div>
+        <div>
+          <div style="font-weight:700">PATEL YASHKUMAR DARSHANBHAI</div>
+          <div style="font-size:12px;color:var(--muted)">Frontend developer • Web designer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="btn-primary" href="#contact">Hire me</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>Hi — I'm <span style="color:var(--accent)">YASH PATEL</span></h1>
+        <h2>Frontend Developer & UI Designer</h2>
+        <p class="hero-intro">I build responsive websites and web apps using HTML, CSS and JavaScript. I focus on clean UI, performance and accessibility. Below are some of my highlighted projects and skills.</p>
+        <div class="actions">
+          <a class="btn" href="#projects"><i class="fa fa-briefcase"></i> Projects</a>
+          <a class="btn" href="https://github.com/yourusername" target="_blank"><i class="fa fa-code"></i> GitHub</a>
+        </div>
+
+        <section id="projects">
+          <h3 style="margin-top:18px">Highlighted projects</h3>
+          <div class="projects-grid">
+            <article class="project">
+              <h3>Hospital Management System</h3>
+              <p style="margin:0 0 10px;color:var(--muted)">Full responsive HMS with patient management, appointments and admin dashboard.</p>
+              <div style="display:flex;gap:8px"><a class="btn" href="c:\Users\Yash Patel\Desktop\MY PORFOLIO\HMS project\HMS.html">Live</a><a class="btn" href="https://github.com/yourusername/hospital-management-system" target="_blank">Code</a></div>
+            </article>
+
+            <article class="project">
+              <h3>WearNest — E-commerce</h3>
+              <p style="margin:0 0 10px;color:var(--muted)">Clothing store frontend with product filters, cart and responsive design.</p>
+              <div style="display:flex;gap:8px"><a class="btn" href="#">Live</a><a class="btn" href="https://github.com/yourusername/wearnest" target="_blank">Code</a></div>
+            </article>
+
+            <article class="project">
+              <h3>Gadgets Shop</h3>
+              <p style="margin:0 0 10px;color:var(--muted)">Gadgets marketplace front-end with category pages and product details.</p>
+              <div style="display:flex;gap:8px"><a class="btn" href="#">Live</a><a class="btn" href="https://github.com/yourusername/gadgets-site" target="_blank">Code</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section id="about" style="margin-top:18px">
+          <h3>About</h3>
+          <p style="color:var(--muted);margin-top:6px">I'm a web developer focused on creating beautiful, accessible and responsive user experiences. I love turning ideas into pixel-perfect interfaces and clean, maintainable code.</p>
+        </section>
+
+        <section id="skills" style="margin-top:14px">
+          <h3>Skills</h3>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Responsive Design</span>
+            <span class="skill">Bootstrap / Tailwind</span>
+            <span class="skill">React (basic)</span>
+          </div>
+        </section>
+      </div>
+
+      <aside class="profile-card card">
+        <div class="big-avatar"><img src="IMAGE/WhatsApp Image 2023-03-24 at 21.45.47.jpg" alt="profile" style="width:100%;height:100%;object-fit:cover"></div>
+        <div style="font-weight:700;font-size:18px">YASH PATEL</div>
+        <div style="color:var(--muted)">Frontend developer</div>
+        <div class="contact-list">
+          <div class="contact-item"><i class="fa fa-envelope"></i> <a href="mailto:youremail@example.com">yashpatel859635@gmail.com</a></div>
+          <div class="contact-item"><i class="fa fa-phone"></i> +91 9427836272</div>
+          <div class="contact-item"><i class="fa fa-map-marker-alt"></i> SURAT, GUJARAT, INDIA</div>
+        </div>
+        <div style="width:100%">
+          <a class="btn" href="https://drive.google.com/your-resume-link" target="_blank" style="display:block;text-align:center">Download Resume</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="two-col">
+      <div class="card">
+        <h3>Experience</h3>
+        <div class="experience-item">
+          <strong>Web Designer — Internship</strong>
+          <div style="color:var(--muted);font-size:13px">Jan 2025 — Apr 2025</div>
+          <p style="margin-top:8px;color:var(--muted)">Built a responsive Hospital Management System UI using HTML, CSS and JavaScript; implemented responsive layouts and interactive components.</p>
+        </div>
+
+        <div class="experience-item" style="margin-top:8px">
+          <strong>Network Engineering Intern</strong>
+          <div style="color:var(--muted);font-size:13px">Jan 2025 — Apr 2025</div>
+          <p style="margin-top:8px;color:var(--muted)">Worked on deployment and maintenance of internal network systems.</p>
+        </div>
+      </div>
+
+      <div class="card" id="contact">
+        <h3>Contact me</h3>
+        <form onsubmit="handleSubmit(event)">
+          <input type="text" id="name" placeholder="Your name" required />
+          <input type="email" id="email" placeholder="Your email" required />
+          <input type="text" id="subject" placeholder="Subject" />
+          <textarea id="message" placeholder="Message"></textarea>
+          <button class="btn-primary" type="submit">Send message</button>
+        </form>
+        <p style="color:var(--muted);font-size:13px;margin-top:10px">Or email me at <a href="mailto:youremail@example.com">yashpatel859635@gmail.com</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made with ❤️ • <span style="color:var(--muted)">YASH PATEL</span></p>
+    </footer>
+  </div>
+
+  <script>
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value || 'Contact from portfolio';
+      const message = document.getElementById('message').value;
+      const mailto = `mailto:youremail@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+message)}`;
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
