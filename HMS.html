@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Management System</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    header { background: #0077b6; color: #fff; padding: 15px 30px; position: sticky; top: 0; z-index: 1000; }
+    header nav { display: flex; justify-content: space-between; align-items: center; }
+    header nav ul { display: flex; list-style: none; }
+    header nav ul li { margin: 0 15px; }
+    header nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+    header nav ul li a:hover { text-decoration: underline; }
+
+    .hero { background: url('https://img.freepik.com/free-photo/modern-hospital-building_1127-3396.jpg') no-repeat center/cover; color: #fff; text-align: center; padding: 100px 20px; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; }
+
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    .about, .services, .doctors, .appointment, .contact { margin-bottom: 40px; }
+
+    h2 { color: #0077b6; text-align: center; margin-bottom: 20px; }
+
+    .services-grid, .doctors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .card img { width: 100%; border-radius: 8px; }
+
+    form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
+    input, textarea, select, button { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    button { background: #0077b6; color: #fff; border: none; cursor: pointer; }
+    button:hover { background: #023e8a; }
+
+    footer { background: #023e8a; color: #fff; text-align: center; padding: 20px; }
+    footer p { margin: 5px 0; }
+
+    @media(max-width: 768px){
+      header nav ul { flex-direction: column; display: none; background: #0077b6; position: absolute; top: 60px; right: 0; width: 200px; }
+      header nav ul.show { display: flex; }
+      header nav .menu-toggle { display: block; cursor: pointer; font-size: 1.5rem; }
+    }
+    @media(min-width: 769px){
+      header nav .menu-toggle { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h2 style="color: #fff;">🏥 Sanjivni Hospital </h2>
+      <span class="menu-toggle">☰</span>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctors">Doctors</a></li>
+        <li><a href="#appointment">Appointment</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Welcome to Sanjivni Hospital</h1>
+    <p>Providing Quality Healthcare Since 1990</p>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>We are a multi-specialty hospital with world-class doctors and modern facilities. Our mission is to provide the best healthcare services with compassion and professionalism.</p>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="card">
+        <h3>Emergency Care</h3>
+        <p>24/7 emergency department with advanced facilities.</p>
+      </div>
+      <div class="card">
+        <h3>OPD</h3>
+        <p>Outpatient consultations with experienced doctors.</p>
+      </div>
+      <div class="card">
+        <h3>Surgery</h3>
+        <p>State-of-the-art operation theatres and surgical care.</p>
+      </div>
+      <div class="card">
+        <h3>Diagnostics</h3>
+        <p>Fully equipped lab and imaging services.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="doctors" id="doctors">
+    <h2>Our Doctors</h2>
+    <div class="doctors-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/250" alt="Doctor 1">
+        <h3>Dr. Anjali Sharma</h3>
+        <p>Cardiologist</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/250" alt="Doctor 2">
+        <h3>Dr. Ramesh Patel</h3>
+        <p>Neurologist</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/250" alt="Doctor 3">
+        <h3>Dr. Priya Singh</h3>
+        <p>Pediatrician</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="appointment" id="appointment">
+    <h2>Book an Appointment</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <select required>
+        <option value="">Select Department</option>
+        <option>Cardiology</option>
+        <option>Neurology</option>
+        <option>Pediatrics</option>
+        <option>General</option>
+      </select>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> 123 Health Street, City, State</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <p><strong>Email:</strong> info@myhospital.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 My Hospital. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
